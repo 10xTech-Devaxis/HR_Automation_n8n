@@ -1,0 +1,659 @@
+{
+  "name": "HR Candidate Automation",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "17bpm2MFIsB77q5-sS1lEkMyJ5bcOU3E8_igL_f8xQ38",
+          "mode": "list",
+          "cachedResultName": "HR_Tracker_Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17bpm2MFIsB77q5-sS1lEkMyJ5bcOU3E8_igL_f8xQ38/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17bpm2MFIsB77q5-sS1lEkMyJ5bcOU3E8_igL_f8xQ38/edit#gid=0"
+        },
+        "options": {}
+      },
+      "id": "754b7ddf-26b8-4389-b6a4-4d28e42642bf",
+      "name": "Google Sheets Trigger",
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        -816,
+        176
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "AdzoPPofBlMw1wug",
+          "name": "Google Sheets Trigger OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.status_normalized }}",
+              "value2": "shortlist"
+            }
+          ]
+        }
+      },
+      "id": "db4166bc-f849-4beb-acf4-a13246b66cd4",
+      "name": "IF Shortlisted",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        0,
+        192
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.status_normalized }}",
+              "value2": "completed"
+            }
+          ]
+        }
+      },
+      "id": "01307de3-0174-4926-9380-70068814ed6a",
+      "name": "IF Completed",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        0,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "={{$json.subject}}",
+        "includeHtml": true,
+        "htmlMessage": "={{ $json.body }}",
+        "message": "=",
+        "toList": [
+          "={{ $json.email }}"
+        ],
+        "additionalFields": {}
+      },
+      "id": "c8235a22-6d26-4dfb-a4e9-3d338b25b514",
+      "name": "Send Email",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        1184,
+        176
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "i7xtOKjhJ7oKfoKA",
+          "name": "Gmail OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "documentURL": "https://docs.google.com/document/d/1xuw8V7pXPqtNiqdXrmRj9yFrJwnQIH1Af_IPLFwS6b8/edit?tab=t.0"
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        352,
+        176
+      ],
+      "id": "4593b426-a3e3-4c55-adc9-ce07ac6b081b",
+      "name": "Get a document",
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "1YbBSykXIZEuvG1z",
+          "name": "Google Docs OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "17bpm2MFIsB77q5-sS1lEkMyJ5bcOU3E8_igL_f8xQ38",
+          "mode": "list",
+          "cachedResultName": "HR_Tracker_Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17bpm2MFIsB77q5-sS1lEkMyJ5bcOU3E8_igL_f8xQ38/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17bpm2MFIsB77q5-sS1lEkMyJ5bcOU3E8_igL_f8xQ38/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Email": "={{ $('Google Sheets Trigger').item.json.Email }}",
+            "Email_sent": "true"
+          },
+          "matchingColumns": [
+            "Email"
+          ],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Task_Link",
+              "displayName": "Task_Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email_sent",
+              "displayName": "Email_sent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1616,
+        0
+      ],
+      "id": "e50b1bf6-d4fd-43f5-a144-fe225a397d2e",
+      "name": "Update row in sheet",
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nc3QftswaJKATR7m",
+          "name": "Google Sheets OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "28e90c07-6e9c-489c-b616-473335c3571e",
+              "leftValue": "={{ $json.labelIds }}",
+              "rightValue": "=SENT",
+              "operator": {
+                "type": "array",
+                "operation": "contains",
+                "rightType": "any"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        1392,
+        176
+      ],
+      "id": "f31eeabf-b4c9-4725-b44a-b610768dd517",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "17bpm2MFIsB77q5-sS1lEkMyJ5bcOU3E8_igL_f8xQ38",
+          "mode": "list",
+          "cachedResultName": "HR_Tracker_Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17bpm2MFIsB77q5-sS1lEkMyJ5bcOU3E8_igL_f8xQ38/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17bpm2MFIsB77q5-sS1lEkMyJ5bcOU3E8_igL_f8xQ38/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Email": "={{ $('Google Sheets Trigger').item.json.Email }}",
+            "Email_sent": "false"
+          },
+          "matchingColumns": [
+            "Email"
+          ],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Task_Link",
+              "displayName": "Task_Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email_sent",
+              "displayName": "Email_sent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1616,
+        240
+      ],
+      "id": "c90d3034-fb8c-4631-8d1b-e5147e5cc41c",
+      "name": "Update row in sheet1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ImlgnKgcu2yonqpO",
+          "name": "Google Sheets OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const text = $json.content;\n\n// split ONLY on === section markers (properly)\nconst sections = text.split(/===\\s*(.*?)\\s*===/g);\n\nconst templates = {};\n\n// sections will look like:\n// [\"\", \"new\", \"content...\", \"shortlisted\", \"content...\", ...]\nfor (let i = 1; i < sections.length; i += 2) {\n  const key = sections[i].toLowerCase().trim();\n  const content = sections[i + 1];\n\n  const lines = content\n    .split('\\n')\n    .map(l => l.trim())\n    .filter(Boolean);\n\n  const subjectLine = lines.find(l =>\n    l.toLowerCase().startsWith('subject:')\n  );\n\n  if (!subjectLine) continue;\n\n  const subject = subjectLine.split(':').slice(1).join(':').trim();\n\n  const body = lines\n    .slice(lines.indexOf(subjectLine) + 1)\n    .join('\\n');\n\n  templates[key] = { subject, body };\n}\n\nreturn [{ json: templates }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        560,
+        176
+      ],
+      "id": "60a0247b-f37d-4ed6-9576-96160f22d844",
+      "name": "Extract Templates"
+    },
+    {
+      "parameters": {
+        "functionCode": "const status =  $node[\"Google Sheets Trigger\"].json.Status.toLowerCase(); \n\nconst templates = $json;\nconst template = templates[status];\n\nif (!template) {\n  throw new Error(`No template found for status: ${status}`);\n}\n\nreturn [{\n  json: {\n    ...template,\n    candidate: $node[\"Google Sheets Trigger\"].json\n  }\n}];"
+      },
+      "id": "04307f7f-9825-4c3c-984e-f1494b3b5f26",
+      "name": "Choose Template by Status",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        768,
+        176
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "const { subject, body, candidate } = $json;\n\nconst map = {\n  \"{{Name}}\": candidate.Name,\n  \"{{Task_Link}}\": candidate[\"Task Link\"],\n  \"{{Email}}\": candidate.Email\n};\n\nlet finalSubject = subject;\nlet finalBody = body;\n\nfor (const key in map) {\n  finalSubject = finalSubject.replaceAll(key, map[key] || \"\");\n  finalBody = finalBody.replaceAll(key, map[key] || \"\");\n}\n\nreturn [{\n  json: {\n    email: candidate.Email,\n    subject: finalSubject,\n    body: finalBody\n  }\n}];"
+      },
+      "id": "1061cde3-ebff-49e0-907b-a83aad888739",
+      "name": "Personalize Email Content",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        976,
+        176
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.status_normalized }}",
+              "operation": "isEmpty"
+            },
+            {
+              "value1": "={{ $json.status_normalized }}",
+              "value2": "new"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "3dfad364-c754-4c7d-a94c-6a3f5c06df15",
+      "name": "IF New",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "53c921a4-e1c7-40fe-a5bc-b40acc03da29",
+              "leftValue": "={{ $json['Email Sent'] }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -576,
+        176
+      ],
+      "id": "68cb9aa6-e0db-4abc-aea4-49c5a554e9fc",
+      "name": "Duplicate Check "
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{\n  json: {\n    ...$json,\n    status_normalized: $json.Status?.toLowerCase().trim()\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -304,
+        192
+      ],
+      "id": "e7040979-092c-4a64-83b6-3f8e644986a3",
+      "name": "Normalized status",
+      "alwaysOutputData": true,
+      "executeOnce": false
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Google Sheets Trigger": {
+      "main": [
+        [
+          {
+            "node": "Duplicate Check ",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Shortlisted": {
+      "main": [
+        [
+          {
+            "node": "Get a document",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Completed": {
+      "main": [
+        [
+          {
+            "node": "Get a document",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get a document": {
+      "main": [
+        [
+          {
+            "node": "Extract Templates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Email": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Update row in sheet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Templates": {
+      "main": [
+        [
+          {
+            "node": "Choose Template by Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Choose Template by Status": {
+      "main": [
+        [
+          {
+            "node": "Personalize Email Content",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Personalize Email Content": {
+      "main": [
+        [
+          {
+            "node": "Send Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF New": {
+      "main": [
+        [
+          {
+            "node": "Get a document",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Duplicate Check ": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Normalized status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalized status": {
+      "main": [
+        [
+          {
+            "node": "IF New",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IF Shortlisted",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IF Completed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "e8b63dd8-9f13-4fc8-99bb-aedf9505fcfb",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d72e1373ba728ec7033bd864c87d03e013862f8aac6a1f2d96873bd3d42b5d6e"
+  },
+  "id": "fu4CfgUeqER7nwKZ",
+  "tags": []
+}
