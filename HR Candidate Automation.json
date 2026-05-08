@@ -4,20 +4,20 @@
     {
       "parameters": {
         "operation": "get",
-        "documentURL": "https://docs.google.com/document/d/1gcb44M8sb44PAPzvGhhZ0-xGoEnZDivpqD1Yknhr-n0/edit?tab=t.0"
+        "documentURL": "https://docs.google.com/document/d/18-XYv5bZCErn5q3rvW8dKN6zmuOGDLw7I-87IZPi5Ho/edit?tab=t.0"
       },
       "type": "n8n-nodes-base.googleDocs",
       "typeVersion": 2,
       "position": [
-        448,
-        0
+        -832,
+        224
       ],
-      "id": "9b72eb0d-d470-4aae-8400-23a2119a76d3",
+      "id": "d188feeb-245d-4c5c-993c-4e3bdf209032",
       "name": "Get a document",
       "credentials": {
         "googleDocsOAuth2Api": {
-          "id": "uSQVrnihZkVC3jPf",
-          "name": "Google Docs OAuth2 API"
+          "id": "efiu4rEBk1xf3qfo",
+          "name": "Google Docs account"
         }
       }
     },
@@ -28,10 +28,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        624,
-        0
+        -656,
+        224
       ],
-      "id": "74b48a0b-6f7b-4fee-b86a-74b629747911",
+      "id": "e35bf045-a3ef-4128-b2b8-520b6de9c9f6",
       "name": "Code in JavaScript"
     },
     {
@@ -43,10 +43,10 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2,
       "position": [
-        832,
-        -112
+        -448,
+        112
       ],
-      "id": "c8f76947-2458-4085-ae07-2f6e963eeff3",
+      "id": "823c6344-e2a7-4dd1-86b9-bd27073900c4",
       "name": "Merge"
     },
     {
@@ -60,32 +60,32 @@
         },
         "documentId": {
           "__rl": true,
-          "value": "1xkdpcb-PaYBeJZ7FYoYZc2zZaonhcFZL5iqkQdo_tf0",
+          "value": "1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY",
           "mode": "list",
-          "cachedResultName": "Copy of HR_Tracker_Sheet2",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1xkdpcb-PaYBeJZ7FYoYZc2zZaonhcFZL5iqkQdo_tf0/edit?usp=drivesdk"
+          "cachedResultName": "HR_Tracker_Sheet",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY/edit?usp=drivesdk"
         },
         "sheetName": {
           "__rl": true,
-          "value": "gid=0",
+          "value": 1271037269,
           "mode": "list",
           "cachedResultName": "Sheet1",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1xkdpcb-PaYBeJZ7FYoYZc2zZaonhcFZL5iqkQdo_tf0/edit#gid=0"
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY/edit#gid=1271037269"
         },
         "options": {}
       },
       "type": "n8n-nodes-base.googleSheetsTrigger",
       "typeVersion": 1,
       "position": [
-        256,
-        0
+        -1024,
+        224
       ],
-      "id": "c11e07b8-cced-4593-a9bd-6f4f958483fe",
+      "id": "eec68a24-4209-47f7-a21d-36c50e5329e8",
       "name": "Google Sheets Trigger",
       "credentials": {
         "googleSheetsTriggerOAuth2Api": {
-          "id": "6iH5YuVJweZHKOfu",
-          "name": "Google Sheets Trigger OAuth2 API"
+          "id": "qWsR8pCBM2NaMmX8",
+          "name": "Google Sheets Trigger account"
         }
       }
     },
@@ -168,10 +168,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        1024,
-        -128
+        -256,
+        96
       ],
-      "id": "c4bf9580-a1e6-45f3-9674-409456c01858",
+      "id": "fcc71496-2111-42e1-984b-67862af81ec9",
       "name": "Switch"
     },
     {
@@ -181,10 +181,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1280,
-        -224
+        0,
+        0
       ],
-      "id": "e70cdb92-5668-4e97-9761-2e704fce0c54",
+      "id": "dd7ff5fe-dbf9-485e-a063-236ffa7fe1f7",
       "name": "Code in JavaScript1"
     },
     {
@@ -194,10 +194,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1264,
-        -48
+        -16,
+        176
       ],
-      "id": "65746ea7-32a2-4d26-8da5-df4d73bafc41",
+      "id": "d6a88425-e695-4f48-8189-5b7350be27d8",
       "name": "Code in JavaScript2"
     },
     {
@@ -207,10 +207,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1248,
-        112
+        -32,
+        336
       ],
-      "id": "c9743d23-5567-4cb6-83f7-10765f83d1a0",
+      "id": "52278509-38e1-4ee4-a117-29eb4836f800",
       "name": "Code in JavaScript3"
     },
     {
@@ -223,16 +223,16 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.2,
       "position": [
-        1472,
-        -224
+        192,
+        0
       ],
-      "id": "232fe167-b980-4ce2-9afc-598f160650da",
+      "id": "9250a958-becb-44a6-86c7-885dc141c790",
       "name": "Send a message",
       "webhookId": "1feb17e9-280f-4cee-b1fc-1c4dad7ca45a",
       "credentials": {
         "gmailOAuth2": {
-          "id": "JcdU2Pv0mVFhDwse",
-          "name": "Gmail OAuth2 API"
+          "id": "Ahgn9gHXbIYgFkV0",
+          "name": "Gmail account"
         }
       }
     },
@@ -246,16 +246,16 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.2,
       "position": [
-        1488,
-        -48
+        208,
+        176
       ],
-      "id": "f583dd28-678d-4e47-9706-85ab284e161f",
+      "id": "64a084fc-e8ed-4585-83d6-6711c502de13",
       "name": "Send a message1",
       "webhookId": "35eda0bf-0cee-4967-963d-eda069c16eab",
       "credentials": {
         "gmailOAuth2": {
-          "id": "JcdU2Pv0mVFhDwse",
-          "name": "Gmail OAuth2 API"
+          "id": "Ahgn9gHXbIYgFkV0",
+          "name": "Gmail account"
         }
       }
     },
@@ -269,16 +269,16 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.2,
       "position": [
-        1472,
-        112
+        192,
+        336
       ],
-      "id": "3ee56eac-c70e-4187-ba62-3c6d784cde93",
+      "id": "0bcd8c81-7ad1-4a8f-bb2f-cb7276a99003",
       "name": "Send a message2",
       "webhookId": "ba33bb5a-fa48-4328-a522-0a1a4b3aba3c",
       "credentials": {
         "gmailOAuth2": {
-          "id": "JcdU2Pv0mVFhDwse",
-          "name": "Gmail OAuth2 API"
+          "id": "Ahgn9gHXbIYgFkV0",
+          "name": "Gmail account"
         }
       }
     },
@@ -287,17 +287,17 @@
         "operation": "update",
         "documentId": {
           "__rl": true,
-          "value": "1xkdpcb-PaYBeJZ7FYoYZc2zZaonhcFZL5iqkQdo_tf0",
+          "value": "1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY",
           "mode": "list",
-          "cachedResultName": "Copy of HR_Tracker_Sheet2",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1xkdpcb-PaYBeJZ7FYoYZc2zZaonhcFZL5iqkQdo_tf0/edit?usp=drivesdk"
+          "cachedResultName": "HR_Tracker_Sheet",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY/edit?usp=drivesdk"
         },
         "sheetName": {
           "__rl": true,
-          "value": "gid=0",
+          "value": 1271037269,
           "mode": "list",
           "cachedResultName": "Sheet1",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1xkdpcb-PaYBeJZ7FYoYZc2zZaonhcFZL5iqkQdo_tf0/edit#gid=0"
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY/edit#gid=1271037269"
         },
         "columns": {
           "mappingMode": "defineBelow",
@@ -393,15 +393,15 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        1680,
-        -224
+        400,
+        0
       ],
-      "id": "9dc4664a-8d17-4019-a850-1aed20ec09c8",
+      "id": "dd5194e4-079a-4521-a22e-626a46d7efe7",
       "name": "Update row in sheet",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "odGAp6UBXy6Y341l",
-          "name": "Google Sheets OAuth2 API"
+          "id": "b1r5hAoirYxT3iu2",
+          "name": "Google Sheets account"
         }
       }
     },
@@ -410,17 +410,17 @@
         "operation": "update",
         "documentId": {
           "__rl": true,
-          "value": "1xkdpcb-PaYBeJZ7FYoYZc2zZaonhcFZL5iqkQdo_tf0",
+          "value": "1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY",
           "mode": "list",
-          "cachedResultName": "Copy of HR_Tracker_Sheet2",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1xkdpcb-PaYBeJZ7FYoYZc2zZaonhcFZL5iqkQdo_tf0/edit?usp=drivesdk"
+          "cachedResultName": "HR_Tracker_Sheet",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY/edit?usp=drivesdk"
         },
         "sheetName": {
           "__rl": true,
-          "value": "gid=0",
+          "value": 1271037269,
           "mode": "list",
           "cachedResultName": "Sheet1",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1xkdpcb-PaYBeJZ7FYoYZc2zZaonhcFZL5iqkQdo_tf0/edit#gid=0"
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY/edit#gid=1271037269"
         },
         "columns": {
           "mappingMode": "defineBelow",
@@ -516,15 +516,15 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        1696,
-        -48
+        416,
+        176
       ],
-      "id": "d0d1a459-c5ee-44fe-b308-a78522f50b43",
+      "id": "1c6d2882-88c5-4414-8bd2-a168f127eb88",
       "name": "Update row in sheet1",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "odGAp6UBXy6Y341l",
-          "name": "Google Sheets OAuth2 API"
+          "id": "b1r5hAoirYxT3iu2",
+          "name": "Google Sheets account"
         }
       }
     },
@@ -533,17 +533,17 @@
         "operation": "update",
         "documentId": {
           "__rl": true,
-          "value": "1xkdpcb-PaYBeJZ7FYoYZc2zZaonhcFZL5iqkQdo_tf0",
+          "value": "1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY",
           "mode": "list",
-          "cachedResultName": "Copy of HR_Tracker_Sheet2",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1xkdpcb-PaYBeJZ7FYoYZc2zZaonhcFZL5iqkQdo_tf0/edit?usp=drivesdk"
+          "cachedResultName": "HR_Tracker_Sheet",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY/edit?usp=drivesdk"
         },
         "sheetName": {
           "__rl": true,
-          "value": "gid=0",
+          "value": 1271037269,
           "mode": "list",
           "cachedResultName": "Sheet1",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1xkdpcb-PaYBeJZ7FYoYZc2zZaonhcFZL5iqkQdo_tf0/edit#gid=0"
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY/edit#gid=1271037269"
         },
         "columns": {
           "mappingMode": "defineBelow",
@@ -639,15 +639,15 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        1696,
-        112
+        416,
+        336
       ],
-      "id": "57d86cc4-42fd-4255-8eee-5519b474d765",
+      "id": "842cc109-4db2-4b29-99e8-252157368c0f",
       "name": "Update row in sheet2",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "odGAp6UBXy6Y341l",
-          "name": "Google Sheets OAuth2 API"
+          "id": "b1r5hAoirYxT3iu2",
+          "name": "Google Sheets account"
         }
       }
     }
@@ -803,11 +803,11 @@
     "callerPolicy": "workflowsFromSameOwner",
     "availableInMCP": false
   },
-  "versionId": "0707bb09-d413-4c69-af28-259a9322d62b",
+  "versionId": "4d203ce5-d90b-424f-a315-758edfeb1cde",
   "meta": {
     "templateCredsSetupCompleted": true,
-    "instanceId": "c135bc6bf41b183b8281bdc98ba9b40c881c552354795f1df719ec735840db89"
+    "instanceId": "74014627ff2cbe8beeac33d429cf411f513117ab67c3535af24c9290fcd01738"
   },
-  "id": "MA7ZJB94f4HvGShq",
+  "id": "VLrhgxBLrniUcpjc",
   "tags": []
 }
