@@ -120,6 +120,4 @@ hr-automation/
 * Small businesses
 
 ## Author
- Pavitra Maradi
- [pavitramaradi109@gmail.com](mailto:pavitramaradi109@gmail.com)
- https://www.linkedin.com/in/pavitra-maradi
+ 10xtech
