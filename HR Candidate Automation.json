@@ -1,1 +1,813 @@
-{"data":"<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\" />\n\t\t<link rel=\"icon\" href=\"/favicon.ico\" />\n\t\t<meta name=\"n8n:config:rest-endpoint\" content=\"cmVzdA==\"><meta name=\"n8n:config:sentry\" content=\"eyJkc24iOiIiLCJlbnZpcm9ubWVudCI6ImRldmVsb3BtZW50IiwicmVsZWFzZSI6Im44bkAyLjE4LjUifQ==\">\n\t\t<link rel=\"stylesheet\" href=\"/static/prefers-color-scheme.css\">\n\t\t<script src=\"/static/base-path.js\" type=\"text/javascript\"></script>\n\t\t<script src=\"/static/posthog.init.js\" type=\"text/javascript\"></script>\n\n\t\t<title>n8n.io - Workflow Automation</title>\n\t\t<script type=\"module\" crossorigin src=\"/assets/index-BkR5RVYl.js\"></script>\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/_plugin-vue_export-helper-CRKuwEII.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/chunk-qwjtxq2F.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/vue.runtime.esm-bundler-CN-_wyDx.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/_MapCache-C2pUsidK.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/get-Ct78TRCJ.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/CalendarDate-DxBkK-O8.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/core-DF2nhIlg.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/empty-t7ChGWTS.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/sanitize-html-BJV2X637.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/en-DuB_HVKf.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/src-uxLNA16N.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/merge-C99IPGzd.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/expression-runtime-stub-DjN3Nz7h.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/constants-B5Twj8pV.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useRootStore-Dl-nFeRT.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/settings.store-CpKucf5G.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/dateformat-CcTYfV4z.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/_baseOrderBy-B0vzsbBU.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useDebounce-BdJBmWUd.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useDocumentTitle-Di33Fj-y.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/users.store-Dxl3e12e.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/nodeIcon-C3y36aIq.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/canvas.utils-ByHG3hYM.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/canvas.eventBus-B5jZUmhu.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/expressions-CJMWhkHM.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/uniqBy-CQqUbEdM.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/NDVEmptyState-Dd_VGnz7.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/vue-json-pretty-DvE79Xby.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/core-D1uUO6Ma.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/core-Ccu8m7l0.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/xml-nq20EZ-B.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/VueMarkdown-n8ObZCrv.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/usePinnedData-BVeJswjd.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/executions.store-Bu_N8o7q.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/setupPanel.store-xOF1oJrP.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/nodeTransforms-CZj4GhmT.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/templateTransforms-BihfNu96.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useCanvasOperations-D-N30WTl.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/retry-D4Mo_fu0.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/pushConnection.store-B7WeSii3.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useRunWorkflow-DkI6fF4o.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/collaboration.store-DyqqcVAH.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useClipboard-B_9seI_K.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useInjectWorkflowId-db4hr1Fp.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/assistant.store-Cpx85ax4.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/chatPanel.store-BPnmeJin.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/dateFormatter-CYaM5mXP.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useExecutionHelpers-Qtmz5_Yp.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/externalSecrets.ee.store-N3yatYt2.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/RunDataHtml-C4AOJPii.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/RunData-DYksoeU6.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/exports-C3RP5TD8.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/comlink-voSZKRZC.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/flatten-CAAq4r0x.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/date-picker-GaPFAz0W.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/dialog-x2C-FwSX.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/Draggable-Bb3n4Ob4.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/NodeIcon-BF_Fk1Gk.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useCalloutHelpers-CfbcUZFj.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useTelemetryContext-BwN7nZg3.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/TextWithHighlights-C5SAXm4_.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/VirtualSchema-C0R0oX9i.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/vue-TZd7a7nE.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/vuedraggable.umd-BZM2ra0L.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/DropdownMenu--BsEnm3f.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useAiGateway-mT-dyp0U.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/CredentialIcon-BDiE034B.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useQuickConnect-BdWXP2rv.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useEnvFeatureFlag-B0E7jV-x.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useDynamicCredentials-DgG_YeKH.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/ParameterInputList-CBvuoxrE.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/chart-Bm4n5vXQ.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/col-CgwrTQPw.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useFreeAiCredits-CruYAjog.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/dataTable.store-HoLmn8If.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/semver-ly6oggXC.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/communityNodes.store-DZbgAlSt.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/CommunityNodeUpdateInfo-CAoYyYrr.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/ContactAdministratorToInstall-CM-cZJOM.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useActions-Bf7T0g_X.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/NodeSettings-CVs1FAjE.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/banners.store-Duf1obih.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/sso.store--gKiWf-r.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/roles.store-Czpq0kb9.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/versions.store-C-VJRO6T.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/constants-Eje_HBqN.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/constants-BpsPulcA.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/mcp.constants-BiR2vCA5.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/insights.constants-4r44iXKE.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/insights.utils-4HXpKF4z.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/insights.store-CItGoxH1.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/router-DCli_qtl.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/radio-1d8_8U0b.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/checkbox-CJKQEAiz.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/_initCloneObject-51MW75Ef.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/table-CqU1zKGH.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/values-CmRZQEJK.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/shuffle-DG8z7MVI.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/orderBy-CXLvH-ok.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/TimeAgo-DCqGJp9V.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/KeyboardShortcutTooltip-BkJkiA53.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useKeybindings-k5Ze_1xT.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/chatHubPanel.store-C_K1m5Ol.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useNodeCreatorShortcutCoachmark-Q6gMr9XB.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useExpressionResolveCtx-vVIQLMxF.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useCanvasMapping-CwVxS-0a.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/WorkflowDiffView-CqnECNr6.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/fileUtils-C3Asss03.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/chat.store-BwzIisBp.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/ProjectIcon-Ci8TziGM.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/apiKeys.store-D0hu5bE1.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/logStreaming.store-B5mVTjtY.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/usage.store-BtWd4dOe.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/CopyInput-TNaHeiBV.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/EnterpriseEdition.ee-DMZ2UWjl.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/Modal-BltzC-8Z.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useBugReporting-BWZ98XOb.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/sortByProperty-CIft6AwQ.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/usePageRedirectionHelper-BRR0ux2F.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useGlobalEntityCreation-CAS0-8Sr.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/setupPanel.utils-C3lL3PpR.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/CanvasRunWorkflowButton-ucRLD-hd.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useProvideWorkflowId-DaoaRrz-.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useActivationError-CPRGMv9u.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useWorkflowActivate-DBYlMsuQ.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/BaseLayout-QW5lwQG8.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/CredentialPicker-CvzRqFZ7.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/SetupTemplateFormStep-Bd2Op3aV.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/LoadingView-BPK66VYl.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/instanceAiSettings.store-xvAHzaqF.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/CreditWarningBanner-97cqFI_0.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/instanceAiPermissions-BE3z5F_f.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useMcp-DpjPlW4E.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/ProjectCardBadge-JrVwzIQr.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/ProjectSharing-C2ZBO1vj.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/auth.eventBus-BpqqAm9D.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/folders.store-D4eIS_mh.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/one-password-9K5N84m4.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/ExternalSecretsProviderConnectionSwitch.ee-BJq55f6B.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/SecretsProviderImage.ee-ye8ax5U7.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useSecretsProviderConnection.ee-B7Z0ys2r.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/sourceControl.eventBus-B5AqGW4T.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/useCredentialResolvers-QEw9Jmok.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/TagsDropdown-CBLgdu52.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/WorkflowTagsDropdown-l1DxGxwe.js\">\n\t\t<link rel=\"modulepreload\" crossorigin href=\"/assets/utils-D8TtzAJJ.js\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/src-qd_Dd-7t.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/NDVEmptyState-rnKuZ72v.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/useCanvasOperations-CCjgcrri.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/RunDataHtml-Dn-4rgtR.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/RunData-Dha9I3u1.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/Draggable-B0pfmmgs.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/NodeIcon-Cd4SL1LV.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/useTelemetryContext-DP1IjWBS.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/TextWithHighlights-CnnnTpA3.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/VirtualSchema-DPYoZ503.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/CredentialIcon-D9KQZeCk.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/ParameterInputList-yHurntda.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/CommunityNodeUpdateInfo-Bi69iCuf.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/ContactAdministratorToInstall-CHK0v6tR.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/NodeSettings-DgJFJInz.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/banners-CfXPQxke.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/KeyboardShortcutTooltip-Bz9DcSWs.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/useCanvasMapping-BescTI0D.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/WorkflowDiffView-AXYJbw3w.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/ProjectIcon-DR9446m8.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/CopyInput-BtZayXH3.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/Modal-C00R9oLp.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/CanvasRunWorkflowButton-MqoOLOO1.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/BaseLayout-BMYrg7wB.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/CredentialPicker-C5V1YAkb.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/SetupTemplateFormStep-3ogHiUKu.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/LoadingView-DYCNmVIf.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/CreditWarningBanner-Dg9dokHb.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/ProjectCardBadge-CPGb5FR4.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/ProjectSharing-DHoWOCEa.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/ExternalSecretsProviderConnectionSwitch-CkTWLm8f.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/useCredentialResolvers-CA1O2PID.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/TagsDropdown-BhpNFWHz.css\">\n\t\t<link rel=\"stylesheet\" crossorigin href=\"/assets/index-C99uy_cf.css\">\n\t\t<script type=\"module\">import'data:text/javascript,if(!import.meta.resolve)throw Error(\"import.meta.resolve not supported\")';import.meta.url;import(\"_\").catch(()=>1);(async function*(){})().next();window.__vite_is_modern_browser=true</script>\n\t\t<script type=\"module\">!function(){if(window.__vite_is_modern_browser)return;console.warn(\"vite: loading legacy chunks, syntax error above and the same error below should be ignored\");var e=document.getElementById(\"vite-legacy-polyfill\"),n=document.createElement(\"script\");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>\n\t</head>\n\t<body>\n\t\t<noscript>\n\t\t\t<strong\n\t\t\t\t>We're sorry but the n8n Editor-UI doesn't work properly without JavaScript enabled. Please\n\t\t\t\tenable it to continue.</strong\n\t\t\t>\n\t\t</noscript>\n\t\t<div id=\"app\"></div>\n\t\t<script nomodule>!function(){var e=document,t=e.createElement(\"script\");if(!(\"noModule\"in t)&&\"onbeforeload\"in t){var n=!1;e.addEventListener(\"beforeload\",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute(\"nomodule\")||!n)return;e.preventDefault()}),!0),t.type=\"module\",t.src=\".\",e.head.appendChild(t),t.remove()}}();</script>\n\t\t<script nomodule crossorigin id=\"vite-legacy-polyfill\" src=\"/assets/polyfills-legacy-Camj5jC0.js\"></script>\n\t\t<script nomodule crossorigin id=\"vite-legacy-entry\" data-src=\"/assets/index-legacy-Dthlj-zw.js\">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>\n\t</body>\n</html>\n"}
+{
+  "name": "HR Operations Automation",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "get",
+        "documentURL": "https://docs.google.com/document/d/18-XYv5bZCErn5q3rvW8dKN6zmuOGDLw7I-87IZPi5Ho/edit?tab=t.0"
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        -832,
+        224
+      ],
+      "id": "d188feeb-245d-4c5c-993c-4e3bdf209032",
+      "name": "Get a document",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "efiu4rEBk1xf3qfo",
+          "name": "Google Docs account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Google Docs 'Simplify' mode returns content as direct string field\nconst fullText = $input.item.json.content || '';\n\n// Parse templates\nconst newBlock = fullText.match(/===new===([\\s\\S]*?)===shortlisted===/)?.[1]?.trim() || '';\nconst shortlistedBlock = fullText.match(/===shortlisted===([\\s\\S]*?)===completed===/)?.[1]?.trim() || '';\nconst completedBlock = fullText.match(/===completed===([\\s\\S]*?)$/)?.[1]?.trim() || '';\n\nfunction parseTemplate(block) {\n  const subjectMatch = block.match(/Subject:\\s*(.+)/);\n  const subject = subjectMatch ? subjectMatch[1].trim() : '';\n  const body = block.replace(/Subject:[^\\n]*\\n?/, '').trim();\n  return { subject, body };\n}\n\nreturn [{\n  json: {\n    templates: {\n      new: parseTemplate(newBlock),\n      shortlisted: parseTemplate(shortlistedBlock),\n      completed: parseTemplate(completedBlock),\n    }\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -656,
+        224
+      ],
+      "id": "e35bf045-a3ef-4128-b2b8-520b6de9c9f6",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -448,
+        112
+      ],
+      "id": "823c6344-e2a7-4dd1-86b9-bd27073900c4",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY",
+          "mode": "list",
+          "cachedResultName": "HR_Tracker_Sheet",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1271037269,
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY/edit#gid=1271037269"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1024,
+        224
+      ],
+      "id": "eec68a24-4209-47f7-a21d-36c50e5329e8",
+      "name": "Google Sheets Trigger",
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "qWsR8pCBM2NaMmX8",
+          "name": "Google Sheets Trigger account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "40136a13-69db-436a-9a50-c1f6d215b949",
+                    "leftValue": "={{ $json.Status ? $json.Status.toLowerCase() : 'new' }}",
+                    "rightValue": "new",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "613d85d6-69d2-4926-9f75-0b6036473180",
+                    "leftValue": "={{ $json.Status.toLowerCase() }}",
+                    "rightValue": "shortlisted",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "b3d74a11-9f4c-4283-8694-72f45c99c83b",
+                    "leftValue": "={{ $json.Status.toLowerCase() }}",
+                    "rightValue": "completed",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -256,
+        96
+      ],
+      "id": "fcc71496-2111-42e1-984b-67862af81ec9",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "jsCode": "const row = $input.item.json;\nconst template = row.templates.new;\n\nconst subject = template.subject\n  .replace(/\\{\\{Name\\}\\}/g, row.Name);\n\nconst body = template.body\n  .replace(/\\{\\{Name\\}\\}/g, row.Name)\n  .replace(/\\{\\{Education\\}\\}/g, row.Education || 'your field')\n  .replace(/\\{\\{Task_Link\\}\\}/g, row.Task_Link);\n\nreturn [{ json: { to: row.Email, subject, body, name: row.Name }}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "dd7ff5fe-dbf9-485e-a063-236ffa7fe1f7",
+      "name": "Code in JavaScript1"
+    },
+    {
+      "parameters": {
+        "jsCode": "const row = $input.item.json;\nconst template = row.templates.shortlisted;\n\nconst subject = template.subject\n  .replace(/\\{\\{Name\\}\\}/g, row.Name);\n\nconst body = template.body\n  .replace(/\\{\\{Name\\}\\}/g, row.Name)\n  .replace(/\\{\\{Skills\\}\\}/g, row.Skills || 'your skills');\n\nreturn [{ json: { to: row.Email, subject, body, name: row.Name }}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -16,
+        176
+      ],
+      "id": "d6a88425-e695-4f48-8189-5b7350be27d8",
+      "name": "Code in JavaScript2"
+    },
+    {
+      "parameters": {
+        "jsCode": "const row = $input.item.json;\nconst template = row.templates.completed;\n\nconst subject = template.subject\n  .replace(/\\{\\{Name\\}\\}/g, row.Name);\n\nconst body = template.body\n  .replace(/\\{\\{Name\\}\\}/g, row.Name);\n\nreturn [{ json: { to: row.Email, subject, body, name: row.Name }}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -32,
+        336
+      ],
+      "id": "52278509-38e1-4ee4-a117-29eb4836f800",
+      "name": "Code in JavaScript3"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.to }}",
+        "subject": "={{ $json.subject }}",
+        "message": "={{ $json.body }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        192,
+        0
+      ],
+      "id": "9250a958-becb-44a6-86c7-885dc141c790",
+      "name": "Send a message",
+      "webhookId": "1feb17e9-280f-4cee-b1fc-1c4dad7ca45a",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "Ahgn9gHXbIYgFkV0",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.to }}",
+        "subject": "={{ $json.subject }}",
+        "message": "={{ $json.body }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        208,
+        176
+      ],
+      "id": "64a084fc-e8ed-4585-83d6-6711c502de13",
+      "name": "Send a message1",
+      "webhookId": "35eda0bf-0cee-4967-963d-eda069c16eab",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "Ahgn9gHXbIYgFkV0",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.to }}",
+        "subject": "={{ $json.subject }}",
+        "message": "={{ $json.body }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        192,
+        336
+      ],
+      "id": "0bcd8c81-7ad1-4a8f-bb2f-cb7276a99003",
+      "name": "Send a message2",
+      "webhookId": "ba33bb5a-fa48-4328-a522-0a1a4b3aba3c",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "Ahgn9gHXbIYgFkV0",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY",
+          "mode": "list",
+          "cachedResultName": "HR_Tracker_Sheet",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1271037269,
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY/edit#gid=1271037269"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Email": "={{ $('Code in JavaScript1').item.json.to }}",
+            "Email_sent": "sent"
+          },
+          "matchingColumns": [
+            "Email"
+          ],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Task_Link",
+              "displayName": "Task_Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Education",
+              "displayName": "Education",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Skills",
+              "displayName": "Skills",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email_sent",
+              "displayName": "Email_sent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        400,
+        0
+      ],
+      "id": "dd5194e4-079a-4521-a22e-626a46d7efe7",
+      "name": "Update row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "b1r5hAoirYxT3iu2",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY",
+          "mode": "list",
+          "cachedResultName": "HR_Tracker_Sheet",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1271037269,
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY/edit#gid=1271037269"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Email_sent": "sent",
+            "Email": "={{ $('Code in JavaScript2').item.json.to }}"
+          },
+          "matchingColumns": [
+            "Email"
+          ],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Task_Link",
+              "displayName": "Task_Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Education",
+              "displayName": "Education",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Skills",
+              "displayName": "Skills",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email_sent",
+              "displayName": "Email_sent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        416,
+        176
+      ],
+      "id": "1c6d2882-88c5-4414-8bd2-a168f127eb88",
+      "name": "Update row in sheet1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "b1r5hAoirYxT3iu2",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY",
+          "mode": "list",
+          "cachedResultName": "HR_Tracker_Sheet",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1271037269,
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L1yPZU7R1q71CQko8JoLpOG4NYQABwm8FdU6A740zvY/edit#gid=1271037269"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Email": "={{ $('Code in JavaScript3').item.json.to }}",
+            "Email_sent": "sent"
+          },
+          "matchingColumns": [
+            "Email"
+          ],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Task_Link",
+              "displayName": "Task_Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Education",
+              "displayName": "Education",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Skills",
+              "displayName": "Skills",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email_sent",
+              "displayName": "Email_sent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        416,
+        336
+      ],
+      "id": "842cc109-4db2-4b29-99e8-252157368c0f",
+      "name": "Update row in sheet2",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "b1r5hAoirYxT3iu2",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Get a document": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Google Sheets Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get a document",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code in JavaScript2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code in JavaScript3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript2": {
+      "main": [
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript3": {
+      "main": [
+        [
+          {
+            "node": "Send a message2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message": {
+      "main": [
+        [
+          {
+            "node": "Update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message1": {
+      "main": [
+        [
+          {
+            "node": "Update row in sheet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message2": {
+      "main": [
+        [
+          {
+            "node": "Update row in sheet2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "versionId": "4d203ce5-d90b-424f-a315-758edfeb1cde",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "74014627ff2cbe8beeac33d429cf411f513117ab67c3535af24c9290fcd01738"
+  },
+  "id": "VLrhgxBLrniUcpjc",
+  "tags": []
+}
