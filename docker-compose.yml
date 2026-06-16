@@ -1,7 +1,6 @@
 services:
   n8n:
     image: n8nio/n8n:latest
-    container_name: n8n-main
     ports:
       - "5678:5678"
     environment:
@@ -17,7 +16,7 @@ services:
   python-app:
     build:
       context: .
-      dockerfile: Dockerfile.python
+      dockerfile: Dockerfile
     container_name: hr-automation-app
     ports:
       - "8501:8501"
